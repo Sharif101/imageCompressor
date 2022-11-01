@@ -1,9 +1,51 @@
 .img
 {
-    width: 30%;
+    width: 30% !important;
+   
 }
-
 .img img
 {
+    border-radius: 20px;
     width: 100%;
+}
+
+.middle-btn
+{
+    width: 100%;
+    border-radius: 14px;
+    background: #ecf0f3;
+    box-shadow: 13px 13px 20px #cbced1,
+                -13px -13px 20px #ffffff;
+    padding: 20px;
+}
+.d-btn
+{
+    color:#fff;
+    text-align: center;
+    background: #24cfaa;
+    box-shadow: 3px 3px 8px #b1b1b1,
+                -3px -3px 8px #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    margin: 10px 0;
+
+}
+.d-btn a
+{
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (max-width:576px) {
+    .img
+    {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+    .middle-btn
+    {
+        margin: 20px 0;
+    }
 }

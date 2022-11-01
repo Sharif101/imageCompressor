@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Button from "react-bootstrap/Button";
+// import Button from "react-bootstrap/Button";
 import { Col, Container, Row } from "react-bootstrap";
 import imageCompression from "browser-image-compression";
 import "./Compressor.css";
@@ -43,17 +43,18 @@ const Compressor = () => {
     <div>
       <Container className="mt-5">
         <Row>
-          <Col lg="5" className="img">
+          <Col lg="4" className="img">
             {orgimagefile ? (
               <img src={orgimagefile} alt="" />
             ) : (
               <img
+                className="img-fluid"
                 src="http://navparivartan.in/wp-content/uploads/2018/11/placeholder.png"
                 alt=""
               />
             )}
           </Col>
-          <Col lg="2">
+          <Col lg="3" className="middle-btn">
             <input
               type="file"
               accept="image/*"
@@ -61,27 +62,24 @@ const Compressor = () => {
               className="mb-4"
             />
             {orgimagefile && (
-              <Button
-                className="mb-4"
-                variant="info"
-                onClick={(e) => handleCompress(e)}
-              >
+              <button className="d-btn" onClick={(e) => handleCompress(e)}>
                 Compress Imgae
-              </Button>
+              </button>
             )}
             {compressimage && (
-              <Button className="mt-3" variant="info">
+              <button className="d-btn">
                 <a href={compressimage} download={filename}>
                   Download
                 </a>
-              </Button>
+              </button>
             )}
           </Col>
-          <Col lg="5" className="img">
+          <Col lg="4" className="img">
             {compressimage ? (
               <img src={compressimage} alt="" />
             ) : (
               <img
+                className="img-fluid"
                 src="http://navparivartan.in/wp-content/uploads/2018/11/placeholder.png"
                 alt=""
               />
